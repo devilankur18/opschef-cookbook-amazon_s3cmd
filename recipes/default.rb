@@ -13,7 +13,7 @@ case node['platform_family']
     package pkg
   end
 
-  when "redhat"
+  when "redhat", "ubuntu"
     %w{ s3cmd }.each do |pkg|
     package pkg
   end
