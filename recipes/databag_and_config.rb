@@ -38,8 +38,9 @@ template "#{node['etc']['passwd'][node['amazon_s3cmd']['user']]['dir']}/.s3cfg" 
 end
 
 # Add files to /etc/profile.d.
-%w(amazon_key amazon_secret).each do |var|
-  magic_shell_environment var.upcase do
-    value node[var]
-  end
-end
+
+# %w(amazon_key amazon_secret).each do |var|
+#   magic_shell_environment var.upcase do
+#     value node[var]
+#   end
+# end
